@@ -1,6 +1,6 @@
 {
 	"name": "n8n-nodes-blooio",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"description": "A node for the Blooio API. Send and receive iMessages,RCS, and more via the Blooio API.",
 	"license": "MIT",
 	"homepage": "https://blooio.com",
