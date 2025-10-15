@@ -1,0 +1,51 @@
+{
+	"name": "n8n-nodes-blooio",
+	"version": "0.1.1",
+	"description": "A node for the Blooio API. Send and receive iMessages,RCS, and more via the Blooio API.",
+	"license": "MIT",
+	"homepage": "https://blooio.com",
+	"keywords": [
+		"n8n-community-node-package"
+	],
+	"author": {
+		"name": "David Harvey",
+		"email": "david@blooio.com"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/blooio/n8n-nodes-blooio"
+	},
+	"scripts": {
+		"build": "n8n-node build",
+		"build:watch": "tsc --watch",
+		"dev": "n8n-node dev",
+		"linkdev": "./dev-wrapper.sh",
+		"lint": "n8n-node lint",
+		"lint:fix": "n8n-node lint --fix",
+		"release": "n8n-node release",
+		"prepublishOnly": "n8n-node prerelease"
+	},
+	"files": [
+		"dist"
+	],
+	"n8n": {
+		"n8nNodesApiVersion": 1,
+		"strict": true,
+		"credentials": [
+			"dist/credentials/BlooioApi.credentials.js"
+		],
+		"nodes": [
+			"dist/nodes/BlooioMessaging/BlooioMessaging.node.js"
+		]
+	},
+	"devDependencies": {
+		"@n8n/node-cli": "*",
+		"eslint": "9.32.0",
+		"prettier": "3.6.2",
+		"release-it": "^19.0.4",
+		"typescript": "5.9.2"
+	},
+	"peerDependencies": {
+		"n8n-workflow": "*"
+	}
+}
